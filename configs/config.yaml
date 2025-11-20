@@ -1,0 +1,29 @@
+data:
+  raw_path: ./dataset/dataset_v4.csv
+  target: delivery_time_days
+  date_col: order_purchase_timestamp
+
+features:
+  date_cols:
+    - order_purchase_timestamp
+    - order_approved_at
+    - order_delivered_carrier_date
+    - order_delivered_customer_date
+    - order_estimated_delivery_date
+    - shipping_limit_date
+  use_distance: true
+  product_dims: ['product_length_cm','product_height_cm','product_width_cm']
+
+training:
+  model_type: lightgbm
+  seed: 0
+  test_size: 0.2
+  early_stopping_rounds: 50
+  lgbm:
+    learning_rate: 0.05
+    num_leaves: 64
+    n_estimators: 1000
+
+artifacts:
+  models_dir: ./artifacts/models
+  reports_dir: ./reports
