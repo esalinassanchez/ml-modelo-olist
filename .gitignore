@@ -2,3 +2,5 @@ proyecto
 documents
 .pyc
 .env
+*/__pycache__
+*.pyc
