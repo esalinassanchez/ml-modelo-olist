@@ -1,7 +1,7 @@
 import pandas as pd
 class Preprocess():
     df = None
-    def _init__(self, df):
+    def __init__(self, df):
         self.df = df
     def convert_to_datetime(self, columns):
         """

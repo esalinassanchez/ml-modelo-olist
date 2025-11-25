@@ -5,6 +5,7 @@ class Extract():
     path = None
     def __init__(self, path: str):
         self.path = path
+
     def load_data(self, file_name):
         """
         Carga un archivo CSV desde la ruta especificada.
